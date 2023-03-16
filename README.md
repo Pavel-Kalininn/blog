@@ -1,1 +1,1 @@
-blog-sigma-neon.vercel.app
+https://blog-sigma-neon.vercel.app/
