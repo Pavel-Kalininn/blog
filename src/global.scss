@@ -1,0 +1,237 @@
+@import './assets/variables.scss';
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+textarea,
+input,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+button {
+  cursor: pointer;
+}
+textarea,
+input,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: $color_background;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: $wrapper_width;
+}
+
+%btnWithBorder {
+  border: 1px solid $color_text_1;
+  border-radius: 5px;
+  padding: 6px 18px;
+}
+
+%btn {
+  font-size: 14px;
+  line-height: 22px;
+  text-decoration: none;
+  color: $color_text_1;
+
+  &:hover {
+    opacity: 60%;
+  }
+}
+
+%btnSmallText {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+%btnLargeText {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.signInBtn,
+.logoLink,
+.userBtn {
+  @extend %btn;
+  @extend %btnLargeText;
+}
+
+.editBtn,
+.newArticleBtn {
+  @extend %btnWithBorder;
+  @extend %btn;
+  color: $success-color;
+  border-color: $success-color;
+}
+
+.deleteBtn {
+  @extend %btn;
+  @extend %btnWithBorder;
+  color: $error-color;
+  border-color: $error-color;
+}
+
+.signUpBtn {
+  @extend %btn;
+  @extend %btnLargeText;
+  @extend %btnWithBorder;
+  color: $success-color;
+  border-color: $success-color;
+}
+
+.logoutBtn {
+  @extend %btn;
+  @extend %btnLargeText;
+  @extend %btnWithBorder;
+  color: $color_text_1;
+}

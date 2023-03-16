@@ -1,0 +1,21 @@
+@import 'src/assets/variables';
+
+.likeButton {
+  display: flex;
+  gap: 5px;
+  color: $color_text_1;
+
+  &:before {
+    background-image: url('../../assets/heart.png');
+    height: 16px;
+    width: 16px;
+    content: '';
+    background-repeat: no-repeat;
+  }
+}
+
+.favourite {
+  &:before {
+    background-image: url('../../assets/heartRed.png');
+  }
+}

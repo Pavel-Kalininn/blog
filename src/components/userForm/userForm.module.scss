@@ -1,0 +1,78 @@
+@import 'src/assets/variables';
+
+.card {
+  background: white;
+  padding: 48px 32px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 384px;
+  gap: 21px;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0px 22px 106px rgba(0, 0, 0, 0.07), 0px 9.19107px 44.2843px rgba(0, 0, 0, 0.0503198),
+    0px 4.91399px 23.6765px rgba(0, 0, 0, 0.0417275), 0px 2.75474px 13.2728px rgba(0, 0, 0, 0.035),
+    0px 1.46302px 7.04911px rgba(0, 0, 0, 0.0282725), 0px 0.608796px 2.93329px rgba(0, 0, 0, 0.0196802);
+  border-radius: 6px;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  &__input {
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 16px;
+    line-height: 24px;
+
+    &:focus {
+      border: solid 1px $info_color;
+    }
+
+    &::placeholder {
+      color: #bfbfbf;
+    }
+  }
+
+  &__submit {
+    background: $info_color;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__checkbox {
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #595959;
+  }
+
+  &__error {
+    color: red;
+  }
+
+  &__footer {
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: #8c8c8c;
+  }
+}
+
+.error {
+  border-color: red;
+}

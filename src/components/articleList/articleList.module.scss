@@ -1,0 +1,15 @@
+.articleList {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  &__pagination {
+    text-align: center;
+  }
+}
