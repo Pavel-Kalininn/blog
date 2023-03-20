@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 import Tag from '../tag/tag';
 
@@ -18,3 +18,7 @@ export default function TagList({ tagsArr }) {
     </ul>
   );
 }
+
+TagList.propTypes = {
+  tagsArr: PropTypes.arrayOf(PropTypes.string).isRequired,
+};

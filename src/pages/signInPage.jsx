@@ -12,7 +12,6 @@ export default function SignInPage() {
   const fromPage = location.state?.from?.pathname || '/';
 
   const [loginUser] = useLoginUserMutation();
-
   const onSubmit = async (data) => {
     try {
       await loginUser({ user: { email: data.email, password: data.password } }).unwrap();

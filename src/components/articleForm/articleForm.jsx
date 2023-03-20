@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import classNames from 'classnames';
 import { useForm, useFieldArray } from 'react-hook-form';
+import PropTypes from 'prop-types';
 
 import styles from './articleForm.module.scss';
 
@@ -16,7 +17,6 @@ export default function ArticleForm({ title, article, onSubmit }) {
   } = useForm({ defaultValues: { tagList: article?.tagList } });
 
   const { fields, append, remove } = useFieldArray({ control, name: 'tagList' });
-
   useEffect(() => {
     if (article) {
       const { title: titleArticle, description, body } = article;
@@ -108,3 +108,9 @@ export default function ArticleForm({ title, article, onSubmit }) {
     </div>
   );
 }
+
+ArticleForm.propTypes = {
+  title: PropTypes.string.isRequired,
+  article: PropTypes.object,
+  onSubmit: PropTypes.func.isRequired,
+};

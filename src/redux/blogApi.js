@@ -103,7 +103,7 @@ export const blogApi = createApi({
           body: { article },
         };
       },
-      invalidatesTags: (result, error, arg) => [{ type: 'Article', id: arg }],
+      invalidatesTags: (result, error, arg) => [{ type: 'Article', id: arg.slug }],
     }),
   }),
 });

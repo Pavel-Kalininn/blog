@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import styles from './userForm.module.scss';
@@ -65,7 +66,7 @@ function UserForm({ template, onSubmit, propsErrors, propsValues }) {
           );
         case 'checkbox':
           return (
-            <React.Fragment>
+            <React.Fragment key={index}>
               <label key={index} className={styles.card__checkbox}>
                 <input
                   type="checkbox"
@@ -99,3 +100,8 @@ function UserForm({ template, onSubmit, propsErrors, propsValues }) {
 }
 
 export default UserForm;
+
+UserForm.propTypes = {
+  template: PropTypes.object.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+};
